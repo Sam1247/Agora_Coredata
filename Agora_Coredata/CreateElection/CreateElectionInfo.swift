@@ -30,7 +30,7 @@ struct CreateElectionInfo: View {
                 }
 
                 DatePicker(selection: $electionDataCreating.endDate) {
-                    Text("Start Date")
+                    Text("End Date")
                 }
                 
                 Section (header:
@@ -59,7 +59,7 @@ struct AbstractTextField: View {
     @Binding var binding: String
     var body: some View {
         TextField(label , text: $binding)
-            .background(Color.init(.tertiarySystemBackground))
+            //.background(Color.init(.tertiarySystemBackground))
             .frame(width: (UIScreen.main.bounds.width - 12 * 2) - 12, height: 40)
             .cornerRadius(12.0)
     }

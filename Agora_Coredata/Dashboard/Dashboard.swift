@@ -15,9 +15,8 @@ struct Dashboard: View {
         entity: Election.entity(),
         sortDescriptors: [
             NSSortDescriptor(keyPath: \Election.name, ascending: true),
-        ]
-        //,
-        //predicate: NSPredicate(format: "endDate > %@ AND startDate < %@", NSDate(), NSDate())
+        ],
+        predicate: NSPredicate(format: "endDate > %@ AND startDate < %@", NSDate(), NSDate())
     ) var activeFetchedElections: FetchedResults<Election>
 
     @ObservedObject var electionDataCreating: ElectionDataCreating = ElectionDataCreating()
@@ -33,7 +32,9 @@ struct Dashboard: View {
                     ForEach(activeFetchedElections, id: \.uid) { election in
                         //let electionModel = getElectionModel(from: election)
                         NavigationLink(destination: ElectionDetail(election: election)) {
-                            AbstractCell(labelname: election.name ?? "Election Name", color: Color.init(.systemGreen), systemNameIcon: "person.2.fill")
+                            AbstractCell(labelname: election.name ?? "Election Name",
+                                         color: Color.init(.systemGreen),
+                                         systemNameIcon: "person.2.fill")
                         }
                     }.onDelete(perform: removeElection)
                 }
@@ -123,7 +124,11 @@ struct UpperView: View {
     var body: some View {
         VStack(spacing: padding) {
             HStack {
-                NavigationLink(destination: ElectionList()) {
+                NavigationLink(destination: ElectionList(for: .finihed,
+                                                         header: ElectionListHeader(label: "Finished",
+                                                                                    color: Color.init(.systemBlue),
+                                                                                    iconSystemName: "checkmark.circle.fill"
+                ))) {
                     DashboardMainCell(iconName: "checkmark.circle.fill",
                                   status: "Finished",
                                   count: FinishedFetchedElections.count,
@@ -133,9 +138,13 @@ struct UpperView: View {
                     .cornerRadius(16)
                 }
                 Spacer()
-                NavigationLink(destination: ElectionList()) {
+                NavigationLink(destination: ElectionList(for: .pending,
+                                                         header: ElectionListHeader(label: "Pending",
+                                                                                    color: Color.init(.systemYellow),
+                                                                                    iconSystemName: "clock.fill"
+                ))) {
                     DashboardMainCell(iconName: "clock.fill",
-                                  status: "Pending ",
+                                  status: "Pending",
                                   count: pendingFetchedElections.count,
                                   iconColor: Color.init(.systemYellow))
                 .background(Color.init(.tertiarySystemBackground))
@@ -144,7 +153,11 @@ struct UpperView: View {
                 }
                 
             }
-            NavigationLink(destination: ElectionList()) {
+            NavigationLink(destination: ElectionList(for: .all,
+                                                     header: ElectionListHeader(label: "All",
+                                                                                color: Color.init(.systemGray),
+                                                                                iconSystemName: "tray.full.fill"
+            ))) {
                 DashboardMainCell(iconName: "tray.full.fill",
                                   status: "All",
                                   count: allFetchedElections.count,

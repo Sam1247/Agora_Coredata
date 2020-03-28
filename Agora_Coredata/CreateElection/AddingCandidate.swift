@@ -19,10 +19,7 @@ struct AddingCandidate: View {
         List {
             
             Section {
-                TextField("Candidate Name", text: $username)
-                    .background(Color.init(.tertiarySystemBackground))
-                    .frame(width: (UIScreen.main.bounds.width - 12 * 2) - 12, height: 40)
-                    .cornerRadius(12.0)
+                AbstractTextField(label: "Candidate Name", binding: self.$username)
             }
             
             Section (header:

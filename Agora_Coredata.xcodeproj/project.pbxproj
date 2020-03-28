@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2003CAB8242CDFF300D70F45 /* Election+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003CAB6242CDFF300D70F45 /* Election+CoreDataClass.swift */; };
+		2003CAB9242CDFF300D70F45 /* Election+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003CAB7242CDFF300D70F45 /* Election+CoreDataProperties.swift */; };
+		2003CABB242CE36C00D70F45 /* requestsVariants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003CABA242CE36C00D70F45 /* requestsVariants.swift */; };
+		2003CABD242CE6C200D70F45 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003CABC242CE6C200D70F45 /* Icon.swift */; };
 		20D51DC42428E60500BCD8F5 /* DashboardMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D51DC32428E60500BCD8F5 /* DashboardMainCell.swift */; };
 		20D51DC62428E6F100BCD8F5 /* AbstractCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D51DC52428E6F100BCD8F5 /* AbstractCell.swift */; };
 		20EEE60F2427E9BC0095C896 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EEE60E2427E9BC0095C896 /* AppDelegate.swift */; };
@@ -26,6 +30,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2003CAB6242CDFF300D70F45 /* Election+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Election+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2003CAB7242CDFF300D70F45 /* Election+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Election+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2003CABA242CE36C00D70F45 /* requestsVariants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = requestsVariants.swift; sourceTree = "<group>"; };
+		2003CABC242CE6C200D70F45 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
 		20D51DC32428E60500BCD8F5 /* DashboardMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardMainCell.swift; sourceTree = "<group>"; };
 		20D51DC52428E6F100BCD8F5 /* AbstractCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractCell.swift; sourceTree = "<group>"; };
 		20EEE60B2427E9BC0095C896 /* Agora_Coredata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Agora_Coredata.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +149,10 @@
 			isa = PBXGroup;
 			children = (
 				20FABAC224292C7400766AB7 /* ElectionModel.swift */,
+				2003CAB6242CDFF300D70F45 /* Election+CoreDataClass.swift */,
+				2003CAB7242CDFF300D70F45 /* Election+CoreDataProperties.swift */,
+				2003CABA242CE36C00D70F45 /* requestsVariants.swift */,
+				2003CABC242CE6C200D70F45 /* Icon.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -216,13 +228,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2003CAB8242CDFF300D70F45 /* Election+CoreDataClass.swift in Sources */,
+				2003CABD242CE6C200D70F45 /* Icon.swift in Sources */,
 				20FABABC2428F54F00766AB7 /* CreateElectionInfo.swift in Sources */,
 				20FABAC324292C7400766AB7 /* ElectionModel.swift in Sources */,
 				20FABAB72428ED6400766AB7 /* AbstractButtonView.swift in Sources */,
 				20EEE60F2427E9BC0095C896 /* AppDelegate.swift in Sources */,
+				2003CABB242CE36C00D70F45 /* requestsVariants.swift in Sources */,
 				20FABAC02428F8C000766AB7 /* AddingVotingAlgorithm.swift in Sources */,
 				20D51DC42428E60500BCD8F5 /* DashboardMainCell.swift in Sources */,
 				20FABABE2428F5E200766AB7 /* AddingCandidate.swift in Sources */,
+				2003CAB9242CDFF300D70F45 /* Election+CoreDataProperties.swift in Sources */,
 				20D51DC62428E6F100BCD8F5 /* AbstractCell.swift in Sources */,
 				20FABAB92428EF4F00766AB7 /* ElectionList.swift in Sources */,
 				20EEE6142427E9BC0095C896 /* Agora_Coredata.xcdatamodeld in Sources */,
